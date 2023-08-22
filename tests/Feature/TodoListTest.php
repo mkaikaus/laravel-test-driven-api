@@ -12,7 +12,6 @@ class TodoListTest extends TestCase
 
     public function test_store_todo_list()
     {
-        $this->withoutExceptionHandling();
         //preparation
         
         //action
