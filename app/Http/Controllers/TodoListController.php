@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TodoList;
 use Illuminate\Http\Request;
+
 
 class TodoListController extends Controller
 {
     public function index(){
-        return response(['lists'=>[]]);
+
+        //return response(['lists'=>[]]);
+
+        $lists =TodoList::all();
+        
+        return response($lists);
     }
 }
