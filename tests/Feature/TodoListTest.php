@@ -14,7 +14,12 @@ class TodoListTest extends TestCase
     public function test_fetch_todo_list()
     {
         //preparation
-        TodoList::create(['name' => 'my list']);
+        // $list = TodoList::factory()->create(['name' => 'my list']); -> To customize one column
+
+        // $list = TodoList::factory()->count(2)->create(['name' => 'my list']); ->To make more than one faker
+        
+        TodoList::factory()->create();
+        
         //action
         $response = $this->getJson(route('todo-list.store'));
         //dd($response);
