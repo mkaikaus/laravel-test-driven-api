@@ -20,4 +20,9 @@ abstract class TestCase extends BaseTestCase
         
         $this->withoutExceptionHandling();
     }
+
+    public function createTodoList($args = [])
+    {
+        return TodoList::factory()->create($args);
+    }
 }
